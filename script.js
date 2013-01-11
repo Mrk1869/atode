@@ -65,9 +65,6 @@
       document.appendChild(atode_elm);
     }
 
-    var user_id = getScriptParams()["id"];
-    console.log(user_id);
-
     // send data
     var formelm = document.createElement('form');
     var elm1 = document.createElement('input');
@@ -82,7 +79,7 @@
     elm2.value = location.href;
     // secure
     elm3.name = "s";
-    elm3.value = user_id;
+    elm3.value = getScriptParams()["id"];;
     // body
     elm4.name = "b";
     elm4.appendChild(document.createTextNode(documentcode));
