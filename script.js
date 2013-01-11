@@ -5,11 +5,11 @@
     var src = scripts[scripts.length - 1].src;
 
     var query = src.substring(src.indexOf('?')+1);
-    var param = query.splite('&');
+    var param = query.split('&');
 
     var result = new Object();
     for(var i = 0; i < param.length; i++){
-      var element = param[i].splite('=');
+      var element = param[i].split('=');
       var paramName = decodeURICompornemt(element[0]);
       var paramValue = decodeURICompornemt(element[1]);
     }
