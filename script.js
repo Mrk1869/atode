@@ -13,11 +13,7 @@
       var paramName = decodeURIComponent(element[0]);
       var paramValue = decodeURIComponent(element[1]);
     }
-<<<<<<< HEAD
     console.log(src);
-=======
-    console.log(result);
->>>>>>> b62a63d9e2ac4ff3c4611d6b216e22f203af03c2
     return result;
   }
 
