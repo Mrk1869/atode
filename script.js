@@ -1,20 +1,21 @@
 (function() {
 
-//  function getScriptParams(){
-//    var scripts = document.getElementsByTagName('script');
-//    var src = scripts[scripts.length - 1].src;
+  function getScriptParams(){
+    var scripts = document.getElementsByTagName('script');
+    var src = scripts[scripts.length - 1].src;
 
-//    var query = src.substring(src.indexOf('?')+1);
-//    var param = query.split('&');
+    var query = src.substring(src.indexOf('?')+1);
+    var param = query.split('&');
 
-//    var result = new Object();
-//    for(var i = 0; i < param.length; i++){
-//      var element = param[i].split('=');
-//      var paramName = decodeURIComponent(element[0]);
-//      var paramValue = decodeURIComponent(element[1]);
-//    }
-//    return result;
-//  }
+    var result = new Object();
+    for(var i = 0; i < param.length; i++){
+      var element = param[i].split('=');
+      var paramName = decodeURIComponent(element[0]);
+      var paramValue = decodeURIComponent(element[1]);
+    }
+    console.log(src);
+    return result;
+  }
 
   function getdocumentcode(obj){
     var code = "";
@@ -63,6 +64,8 @@
     }catch(e){
       document.appendChild(atode_elm);
     }
+
+    var user_id = getScriptParams();
 
     // send data
     var formelm = document.createElement('form');
