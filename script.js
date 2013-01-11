@@ -12,11 +12,7 @@
       var element = param[i].split('=');
       var paramName = decodeURIComponent(element[0]);
       var paramValue = decodeURIComponent(element[1]);
-      console.log(paramValue);
     }
-
-    console.log(param);
-
     return result;
   }
 
@@ -68,7 +64,8 @@
       document.appendChild(atode_elm);
     }
 
-    var user_id = getScriptParams();
+    var user_id = getScriptParams()["id"];
+    console.log(user_id);
 
     // send data
     var formelm = document.createElement('form');
