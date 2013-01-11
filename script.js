@@ -12,8 +12,11 @@
       var element = param[i].split('=');
       var paramName = decodeURIComponent(element[0]);
       var paramValue = decodeURIComponent(element[1]);
+      console.log(paramValue);
     }
-    console.log(src);
+
+    console.log(param);
+
     return result;
   }
 
