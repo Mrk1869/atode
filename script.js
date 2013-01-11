@@ -10,8 +10,8 @@
     var result = new Object();
     for(var i = 0; i < param.length; i++){
       var element = param[i].split('=');
-      var paramName = decodeURICompornemt(element[0]);
-      var paramValue = decodeURICompornemt(element[1]);
+      var paramName = decodeURIComponent(element[0]);
+      var paramValue = decodeURIComponent(element[1]);
     }
     return result;
   }
