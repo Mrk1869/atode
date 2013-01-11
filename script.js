@@ -5,7 +5,7 @@
     var src = scripts[scripts.length - 1].src;
 
     var query = src.substring(src.indexOf('?')+1);
-    var param = query.splite('&');
+    var param = query.split('&');
 
     var result = new Object();
     for(var i = 0; i < param.length; i++){
