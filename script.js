@@ -1,7 +1,7 @@
 (function() {
 
   function getScriptParams(){
-    var scripts = document.getElementsByYagName('script');
+    var scripts = document.getElementsByTagName('script');
     var src = scripts[scripts.length - 1].src;
 
     var query = src.substring(src.indexOf('?')+1);
