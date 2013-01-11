@@ -1,24 +1,10 @@
 (function() {
 
   function twitter(title, url){
-
     if(m=prompt('Twitter投稿','')){
-      w=window.open('','_blank','width=0,height=0');
-      f=w.document.createElement('form');
-      f.setAttribute('action','http://twitter.com/statuses/update.xml');
-      f.setAttribute('method','POST');
-      i=w.document.createElement('input');
-      i.setAttribute('type','hidden');
-      i.setAttribute('name','status');
-      i.setAttribute('value',m+'%20'+title+'%20'+url);
-      f.appendChild(i);
-      w.document.documentElement.appendChild(f);
-      f.submit();
-      w.onunload=function(){
-        w.close();
-      }
+      f='http://twitter.com/home?status='+encodeURIComponent(m+'/'+title+' '+url);
+      if(!window.open(f,'_blank'))location.href=f
     }
-
   }
 
   function getScriptParams(){
