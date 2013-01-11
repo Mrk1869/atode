@@ -65,7 +65,7 @@
     }
 
     //mrk-add
-    altert(getScriptParams());
+    alert(getScriptParams());
 
     // send data
     var formelm = document.createElement('form');
