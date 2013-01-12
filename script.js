@@ -14,6 +14,7 @@
         tstbklt();
       }catch(z){
         if(!w.open(u,'t','toolbar=0,resizable=0,status=1,width=450,height=430'))location.href=f;
+      }
     }
   }
 
