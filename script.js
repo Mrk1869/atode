@@ -7,20 +7,13 @@
     }
   }
 
-  function tumblr(title, url){
-    if(text=prompt('Tumblr投稿','')){
-      var e=window.getSelection,k=document.getSelection,x=document.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),e=encodeURIComponent,f='http://www.tumblr.com/share?v=3&u='+e(e(url)) +'&t='+e(e(title)) +'&s='+e(s),l=document.location;
+  function tumblr(title, url) {
+    if(txt=prompt('Tumblr投稿','')){
+      var e=window.getSelection,k=document.getSelection,x=document.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),e=encodeURIComponent, f='http://www.tumblr.com/share?v=3&u='+e(e(url)) +'&t='+e(e(title)) +'&s='+e(s)
       try{if(!/^(.*\.)?tumblr[^.]*$/.test(document.location.host))throw(0);
         tstbklt();
-      }catch(z){a =function(){
-        if(!w.open(f,'t','toolbar=0,resizable=0,status=1,width=450,height=430'))
-          document.location.href=f;
-      };
-      if(/Firefox/.test(navigator.userAgent))
-        setTimeout(a,0);
-      else
-        a();
-      }void(0)
+      }catch(z){
+        if(!w.open(u,'t','toolbar=0,resizable=0,status=1,width=450,height=430'))location.href=f;
     }
   }
 
@@ -160,5 +153,4 @@
 
   twitter(document.title, location.href);
   tumblr(document.title, location.href);
-
 })();
