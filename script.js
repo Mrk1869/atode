@@ -9,12 +9,13 @@
 
   function tumblr(title, url) {
     if(txt=prompt('Tumblr投稿','')){
-      var e=window.getSelection,k=document.getSelection,x=document.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),e=encodeURIComponent, f='http://www.tumblr.com/share?v=3&u='+e(e(url)) +'&t='+e(e(title)) +'&s='+e(s)
-      try{if(!/^(.*\.)?tumblr[^.]*$/.test(document.location.host))throw(0);
+      var d=document,w=window,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='http://www.tumblr.com/share',l=d.location,e=encodeURIComponent,p='?v=3&u='+e(e(url)) +'&t='+e(e(title)) +'&s='+e(s),u=f+p;
+      try{
+        if(!/^(.*\.)?tumblr[^.]*$/.test(l.host))throw(0);
         tstbklt();
       }catch(z){
-        if(!w.open(u,'t','toolbar=0,resizable=0,status=1,width=450,height=430'))location.href=f;
-      }
+        if(!w.open(u,'t','toolbar=0,resizable=0,status=1,width=450,height=430'))l.href=u;
+      };
     }
   }
 
