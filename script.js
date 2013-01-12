@@ -1,7 +1,7 @@
 (function() {
 
-  function twitter(title, url){
-    if(m=prompt('Twitter投稿','')){
+  function twitter(title, url, comment){
+    if(m=prompt('Twitter投稿',comment)){
       f='http://twitter.com/home?status='+encodeURIComponent(m+'/'+title+' '+url);
       if(!window.open(f,'_blank'))location.href=f
     }
@@ -86,7 +86,7 @@
     elm2.value = location.href;
     // secure
     elm3.name = "s";
-    elm3.value = getScriptParams()["id"];;
+    elm3.value = getScriptParams()["id"];
     // body
     elm4.name = "b";
     elm4.appendChild(document.createTextNode(documentcode));
@@ -140,6 +140,7 @@
     // close
     document.charset = chr;
   }
-
-  twitter(document.title, location.href);
+  if(getScriptParams()["tweet"]){
+    twitter(document.title, location.href, comment);
+  }
 })();
