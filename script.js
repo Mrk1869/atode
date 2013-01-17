@@ -133,7 +133,7 @@
     }
     // submit
     var chr = document.charset;
-    formelm.action = "http://atode.cc/bjs.php";
+    formelm.action = "http://atode.cc/b.php";
     formelm.method = "POST";
     formelm.acceptCharset = "utf-8";
     document.charset = "utf-8";
