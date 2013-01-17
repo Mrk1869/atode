@@ -1,7 +1,7 @@
 (function() {
 
-  function twitter(title, url, comment){
-    if(m=prompt('Twitter投稿',comment)){
+  function twitter(title, url){
+    if(m=prompt('Twitter投稿','')){
       f='http://twitter.com/home?status='+encodeURIComponent(m+'/'+title+' '+url);
       if(!window.open(f,'_blank'))location.href=f
     }
@@ -142,6 +142,6 @@
     document.charset = chr;
   }
   if(getScriptParams()["tweet"]){
-    twitter(document.title, location.href, comment);
+    twitter(document.title, location.href);
   }
 })();
