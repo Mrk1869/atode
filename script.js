@@ -96,35 +96,6 @@
     formelm.appendChild(elm3);
     formelm.appendChild(elm4);
 
-    // comment
-//    var selection = "";
-//    if (document.selection && document.selection.createRange){
-//      try{
-//        selection = document.selection.createRange().text;
-//      }catch(e){
-//        selection = "";
-//      }
-//    }else if (document.getSelection){
-//      selection = document.getSelection();
-//    }else if (window.getSelection){
-//      selection = window.getSelection();
-//    }
-//    var comment = prompt("ブックマーク:", "" + selection);
-//    if (comment == null){
-//      try{
-//        document.body.removeChild(atode_elm);
-//      }catch(e){
-//        document.removeChild(atode_elm);
-//      }
-//      return false;
-//    }
-//    if (comment){
-//      var elm5 = document.createElement('input');
-//      elm5.name = "c";
-//      elm5.value = comment;
-//      formelm.appendChild(elm5);
-//    }
-
     formelm.style.display = 'none';
     try{
       document.body.appendChild(formelm);
